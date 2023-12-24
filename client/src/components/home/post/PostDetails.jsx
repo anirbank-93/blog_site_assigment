@@ -84,7 +84,7 @@ const PostDetails = () => {
       <Image src={url} alt="post" />
 
       <Box style={{ float: "right" }}>
-        {account.username === post.username && (
+        {account?.username === post?.username && (
           <>
             <Link to={`/update/${id}`}>
               <EditIcon color="primary" style={{ cursor: "pointer" }} />
@@ -98,21 +98,21 @@ const PostDetails = () => {
         )}
       </Box>
 
-      <Heading>{post.title}</Heading>
+      <Heading>{post?.title}</Heading>
 
       <Author>
         <Typography>
           Author:{" "}
           <Box component="span" style={{ fontWeight: 600 }}>
-            {post.username}
+            {post?.username}
           </Box>
         </Typography>
         <Typography style={{ marginLeft: "auto" }}>
-          {new Date(post.createdAt).toDateString()}
+          {new Date(post?.createdAt).toDateString()}
         </Typography>
       </Author>
 
-      <Description>{post.description}</Description>
+      <Description>{post?.description}</Description>
     </Container>
   );
 };
