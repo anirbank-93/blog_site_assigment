@@ -1,5 +1,5 @@
 # blog_site_assigment
-A simple blog side with CRUD functionality created with Postgresql, Expressjs,  React.js, Node.js, Material UI
+A simple blog side with CRUD functionality created with Postgresql, Sequelize, Expressjs,  React.js, Node.js, Material UI
 
 Pull the codebase from the "master" branch.
 
