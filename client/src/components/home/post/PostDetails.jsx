@@ -1,14 +1,17 @@
 import { useEffect, useContext } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams, Link, useNavigate } from "react-router-dom";
-import { Box, Typography, styled } from "@mui/material";
-import { Edit, Delete } from "@mui/icons-material";
 import { toast } from "react-hot-toast";
 
 import { getOnePost, getAllPosts } from "../../../redux/slices/postsSlice";
 import { JsonAPI } from "../../../service/api";
 import { API_SERVER } from "../../../constants/config";
 import { DataContext } from "../../../context/DataProvider";
+
+// Components
+import { Box, Typography, styled } from "@mui/material";
+import { Edit, Delete } from "@mui/icons-material";
+import Comments from "../post_comments/Comments";
 
 const Container = styled(Box)`
   margin: 50px 100px;
@@ -113,6 +116,8 @@ const PostDetails = () => {
       </Author>
 
       <Description>{post?.description}</Description>
+
+      <Comments post={post} />
     </Container>
   );
 };

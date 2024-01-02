@@ -4,6 +4,7 @@ import { toast } from "react-hot-toast";
 import { useDispatch } from "react-redux";
 
 import { clearBlogPostsState } from "../../redux/slices/postsSlice";
+import { clearPostCommentsState } from "../../redux/slices/postCommentsSlice";
 
 const HeadComponent = styled(AppBar)`
   background: #ffffff;
@@ -32,6 +33,7 @@ const Header = () => {
   const handleLogout = () => {
     localStorage.clear();
     dispatch(clearBlogPostsState());
+    dispatch(clearPostCommentsState());
 
     navigate("/");
 

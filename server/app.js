@@ -10,6 +10,7 @@ import { fileURLToPath, URL, parse } from 'url';
 import authRoutes from './app/routes/auth.routes.js';
 import userRoutes from './app/routes/user.routes.js';
 import postRoutes from './app/routes/post.routes.js';
+import commentRoutes from './app/routes/comment.routes.js';
 
 dotenv.config();
 
@@ -31,7 +32,7 @@ app.use(express.urlencoded({ extended: true }));
 
 import db from './app/models/index.js';
 db.sequelize
-  .sync({ force: true })
+  .sync()    // .sync({ force: true })
   .then(() => {
     console.log('Synced db');
   })
@@ -100,6 +101,7 @@ app.use(
 authRoutes(app);
 userRoutes(app);
 postRoutes(app);
+commentRoutes(app);
 
 const PORT = process.env.PORT || 5000; //** */
 

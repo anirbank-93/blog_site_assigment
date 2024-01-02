@@ -38,5 +38,8 @@ export const SERVICE_URLS = {
   getAllPosts: { url: '/api/posts', method: 'GET', params: true },
   getPostById: { url: '/api/posts', method: 'GET', query: true },
   editPost: { url: '/api/posts', method: 'PUT', query: true },
-  deletePost: { url: '/api/posts', method: 'DELETE', query: true }
+  deletePost: { url: '/api/posts', method: 'DELETE', query: true },
+  addComment: { url: '/api/comments', method: 'POST' },
+  getPostComments: { url: '/api/comments', method: 'GET', query: true },
+  deleteComment: { url: '/api/comments', method: 'DELETE', query: true },
 };

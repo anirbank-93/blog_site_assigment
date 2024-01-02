@@ -5,9 +5,11 @@ import { persistReducer, persistStore } from "redux-persist";
 
 // Reducers
 import BlogPostReducer from './slices/postsSlice';
+import PostCommentsReducer from './slices/postCommentsSlice';
 
 let rootReducer = combineReducers({
-    blogPostSlice: BlogPostReducer
+    blogPostSlice: BlogPostReducer,
+    postCommentSlice: PostCommentsReducer
 });
 
 const persistConfig = {
