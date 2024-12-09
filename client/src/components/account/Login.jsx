@@ -140,7 +140,7 @@ const Login = ({ isAuthenticated }) => {
   return (
     <Div>
       <Box>
-        <Img src={imageUrl} alt="" srcset="" />
+        {/* <Img src={imageUrl} alt="" srcset="" /> */}
         {account === "login" ? (
           <Wrapper>
             <TextField

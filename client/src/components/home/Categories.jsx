@@ -37,7 +37,7 @@ const Categories = () => {
         to={`/create/?category=${category || ""}`}
         style={{ textDecoration: "none" }}
       >
-        <StyledBtn variant="contained">Create blog</StyledBtn>
+        <StyledBtn variant="contained">Create Post</StyledBtn>
       </StyledLink>
 
       <StyledTable>
